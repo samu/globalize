@@ -191,8 +191,18 @@ ActiveRecord::Schema.define do
     t.text       :meta
   end
 
+  create_table :other_serialized_hashes, :force => true do |t|
+    t.text       :meta
+  end
+
   create_table :serialized_hash_translations, :force => true do |t|
     t.integer    :serialized_hash_id
+    t.string     :locale
+    t.text       :meta
+  end
+
+  create_table :other_serialized_hash_translations, :force => true do |t|
+    t.integer    :other_serialized_hash_id
     t.string     :locale
     t.text       :meta
   end
