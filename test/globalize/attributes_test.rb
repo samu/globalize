@@ -204,6 +204,12 @@ class AttributesTest < MiniTest::Spec
       model = SerializedHash.new
       assert_equal Hash.new, model.meta
     end
+
+    it 'works works works' do
+      data = {:foo => "bar", :whats => "up"}
+      model = SerializedHash.create(meta: data)
+      model = OtherSerializedHash.create(meta: "abc")
+    end
   end
 
   describe '#column_for_attribute' do
