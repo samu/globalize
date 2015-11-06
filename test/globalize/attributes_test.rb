@@ -205,7 +205,7 @@ class AttributesTest < MiniTest::Spec
       assert_equal Hash.new, model.meta
     end
 
-    it 'works works works' do
+    it 'doesnt work' do
       data = {:foo => "bar", :whats => "up"}
       model = SerializedHash.create(meta: data)
       model = OtherSerializedHash.create(meta: "abc")
